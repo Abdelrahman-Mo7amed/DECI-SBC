@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - OrthoShoes</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo-div">
+                <img class="logo" src="img/logo-trans.png" alt="Orthoshoes Logo">
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#shop">Shop</a></li>
+                    <li><a href="#dashboard">Dashboard</a></li>
+                    <li><a href="#learn">Learn</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="hamburger" id="hamburger-menu">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-dashboard">
+        <section class="dashboard-header">
+            <div class="dashboard-card">
+                <h3>Devices Connected</h3>
+                <p>Smart Shoe: Connected</p>
+                <p>Wearable Band: Connected</p>
+            </div>
+            <div class="dashboard-card">
+                <h3>Battery Information</h3>
+                <p>Smart Shoe Battery: 85%</p>
+                <p>Wearable Band Battery: 90%</p>
+            </div>
+            <div class="dashboard-card">
+                <h3>Device Code</h3>
+                <p>Smart Shoe Code: ABC123</p>
+                <p>Wearable Band Code: XYZ789</p>
+            </div>
+        </section>
+
+        <section class="player-info">
+            <div class="player-card">
+                <h2>Player Information</h2>
+                <div class="player-details">
+                    <div class="player-image">
+                        <img src="data:image/webp;base64,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" alt="Player Image">
+                    </div>
+                    <div class="player-data">
+                        <p><strong>Name:</strong> Mohamed Salah</p>
+                        <p><strong>Position:</strong> Right Wing</p>
+                        <p><strong>Team:</strong> Liverpool</p>
+                        <p><strong>Stats:</strong> 15 Goals, 10 Assists</p>
+                        <p><strong>Age:</strong> 32 Years</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="dashboard-charts">
+            <div class="chart-card">
+                <h3>Performance Overview</h3>
+                <div id="performance-chart"><img style="width: 100%;" src="https://cdn.statcdn.com/Statistic/1410000/1414572-blank-355.png" alt=""></div>
+            </div>
+            <div class="chart-card">
+                <h3>Activity Summary</h3>
+                <div id="activity-chart"><img style="width: 100%;" src="https://cdn.statcdn.com/Statistic/1410000/1414572-blank-355.png" alt=""></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="img/logo-trans.png" alt="Orthoshoes Logo">
+            </div>
+
+            <div class="footer-nav">
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Shop</a></li>
+                        <li><a href="#">Dashboard</a></li>
+                        <li><a href="#">Learn</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Customer Service</h3>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Live Chat</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Returns and Refunds Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-social">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2024 Orthoshoes. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
