@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #f0f2f5;
+        }
+        .container {
+            display: flex;
+            height: 100vh;
+        }
+        .sidebar {
+            width: 250px;
+            background-color: #1e1e2d;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+        .sidebar img {
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+        .sidebar .menu {
+            margin-top: 20px;
+            width: 100%;
+        }
+        .sidebar .menu a {
+            color: #fff;
+            text-decoration: none;
+            display: block;
+            padding: 10px;
+            text-align: center;
+            margin: 5px 0;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .sidebar .menu a:hover {
+            background-color: #333348;
+        }
+        .content {
+            flex: 1;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .card {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .header h1 {
+            margin: 0;
+        }
+        .player-info {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+        .player-info img {
+            border-radius: 50%;
+        }
+        .stats {
+            display: flex;
+            gap: 20px;
+        }
+        .stats div {
+            background-color: #f0f2f5;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .chart {
+            width: 100%;
+            height: 200px;
+        }
+        .partners, .recent-matches {
+            display: flex;
+            gap: 20px;
+        }
+        .partners img, .recent-matches img {
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <img style="width: 100px;" src="https://vectorflags.s3.amazonaws.com/flags/eg-square-01.png" alt="User">
+            <div class="menu">
+                <a href="#">Dashboard</a>
+                <a href="#">Player</a>
+                <a href="#">Team</a>
+            </div>
+        </div>
+        <div class="content">
+            <div class="card">
+                <div class="header">
+                    <div class="player-info">
+                        <img style="width: 100px;" src="https://vectorflags.s3.amazonaws.com/flags/eg-square-01.png" alt="Player">
+                        <div>
+                            <h1>Egypt National Team</h1>
+                            <p>Football</p>
+                        </div>
+                    </div>
+                    <div class="stats">
+                        <div>
+                            <strong>593</strong>
+                            <p>Matches</p>
+                        </div>
+                        <div>
+                            <strong>314</strong>
+                            <p>Total Goals</p>
+                        </div>
+                        <div>
+                            <strong>500</strong>
+                            <p>Wins</p>
+                        </div>
+                        <div>
+                            <strong>93</strong>
+                            <p>Tie or Lose</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <h2>Performance Rating</h2>
+                <canvas id="performanceChart" class="chart"></canvas>
+            </div>
+        </div>
+        <div class="team-roster">
+            <div class="card">
+                <h2>Team Players</h2>
+                <ul>
+                    <li>Mohamed Salah</li>
+                    <li>Ahmed Hegazi</li>
+                    <li>Mohamed Elneny</li>
+                    <li>Trezeguet</li>
+                    <li>Omar Gaber</li>
+                    <li>Mahmoud Hassan</li>
+                    <li>Ali Gabr</li>
+                    <li>Ahmed Fathy</li>
+                    <li>Mohamed Aboutrika</li>
+                    <li>Essam El-Hadary</li>
+                    <li>Amr Warda</li>
+                </ul>                
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        const ctx = document.getElementById('performanceChart').getContext('2d');
+        const performanceChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+                datasets: [{
+                    label: 'Team Performance',
+                    data: [75, 85, 78, 92, 88, 95, 100, 90, 85, 92, 88, 95], // Example performance data
+                    borderColor: 'rgba(54, 162, 235, 1)',
+                    borderWidth: 2,
+                    fill: false
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

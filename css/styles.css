@@ -207,6 +207,7 @@ nav {
         padding: 10px 0;
         text-align: center;
         z-index: 1000; /* Ensure the menu is on top */
+        margin-top: 110px;
     }
 
     .nav-links.active {
@@ -972,7 +973,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 74vh;
+    height: 84vh;
     padding-top: 50px;
 } /* To avoid content being hidden under the fixed header */
 
@@ -982,7 +983,7 @@ footer {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     padding: 30px;
     width: 100%;
-    max-width: 400px;
+    max-width: 600px;
 }
 
 .signin-container h2 {
@@ -1009,6 +1010,16 @@ footer {
 }
 
 .form-group input {
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--white);
+    color: var(--oxford-blue);
+    font-size: 1rem;
+    transition: box-shadow 0.3s;
+}
+
+.form-group select {
     padding: 15px;
     border: none;
     border-radius: 10px;
@@ -1132,7 +1143,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 80vh;
+    min-height: 72vh;
     text-align: left;
 }
 
